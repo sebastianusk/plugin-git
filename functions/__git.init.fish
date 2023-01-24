@@ -6,7 +6,7 @@ function __git.init
     set -a __git_plugin_abbreviations $name
   end
 
-  set -q __git_plugin_initialized; and return 0
+  not builtin -q abbr; and set -q __git_plugin_initialized; and return 0
 
   set -U __git_plugin_abbreviations
 

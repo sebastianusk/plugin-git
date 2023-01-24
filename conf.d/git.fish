@@ -9,3 +9,7 @@ end
 function _git_uninstall --on-event git_uninstall
   __git.destroy
 end
+
+function _git_init --on-event fish_prompt
+  __git.init
+end
